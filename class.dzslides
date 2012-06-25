@@ -57,7 +57,7 @@ $endfor$
   section, .view head > title {
       /* The font from Google */
       font-family: 'Oswald', arial, serif;
-      font-size: 40px;
+      font-size: 35px;
   }
 
   .view section:after {
@@ -73,7 +73,7 @@ $endfor$
     margin: 1em 0 1em 0;
   }
 
-  /* h1 and h2 are "centered" (180px down) Takahashi style */
+  /* h1 and h2 are "centered" (Xpx down) Takahashi style */
   h1, h2 { 
     padding-top: 150px;
     text-align: center;
@@ -87,7 +87,9 @@ $endfor$
   }
   /* h1 can take children and become a traditional slide */
   h1:not(:only-child) { 
-    margin-top: -150px; /* at top of slide */
+    margin-top: -120px; /* at top of slide */
+    margin-bottom: 20px;
+    font-size: 60px; /* give slide a little more room */
   }
 
   h3 {
@@ -96,12 +98,28 @@ $endfor$
 
   p {
     margin: 25px;
-    font-size: 40px;
+  }
+  ol {
+    margin: 5px 0px 5px 100px;
+    font-size: 90%; 
+  }
+  ul {
+    margin: 5px 0px 5px 50px;
+    font-size: 90%; 
+  }
+  dl {
+    margin: 5px 0px 5px 40px;
+    padding: 0;
   }
 
-  ul {
-    margin: 50px 0px 0px 100px;
-    font-size: 90%; 
+  dt {
+    font-weight: bold;
+  }
+
+  dd {
+    font-size: 90%;
+    margin: 0 0 10px 15px;
+    padding: 0;
   }
 
   /* vertically "center" only children */
