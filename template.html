@@ -1,66 +1,105 @@
 <!DOCTYPE html>
-
+<head>
 <meta charset="utf-8">
-<title>The Title Of Your Presentation</title>
-
-<!-- Your Slides -->
-<!-- One section is one slide -->
-
+  <meta name="author" content="John Doe" />
+  <title>Example Presentation</title>
+</head>
+<body>
 <section>
-    <!-- This is the first slide -->
-    <h1>My Presentation</h1>
-    <footer>by John Doe</footer>
+  <h1 class="title">Example Presentation</h1>
+  <h3 class="date"></h3>
+  <footer class="author">John Doe</footer>
+</section>
+<section class="slide level1" id="outline">
+<h1>Outline</h1>
+<p>An incremental list</p>
+<ul class="incremental">
+<li>Basic text slide styles</li>
+<li>Images</li>
+<li>Media</li>
+</ul>
+</section>
+<section class="slide level1" id="section">
+<h2 id="text-styles">Text Styles</h2>
+</section>
+<section class="slide level1" id="traditional-style">
+<h1>Traditional Style</h1>
+<p>This is a traditional sort of slide, an H1 at the top, and text below.</p>
+<p>It also has (hidden) details</p>
+<p><details>Some notes. They are only visible using on stage shell.</details></p>
+</section>
+<section class="slide level1" id="whiteblack-takahashi-style-single-h1">
+<h1>white/black <a href="http://en.wikipedia.org/wiki/Takahashi_method">Takahashi</a> style (single h1)</h1>
+</section>
+<section class="slide level1" id="section-1">
+<h2 id="blackwhite-always-takashi-h2-w-no-children">black/white always Takashi (h2 w/ no children)</h2>
+</section>
+<section class="slide level1" id="traditional-w-quote">
+<h1>Traditional w/ quote</h1>
+<p>Some text followed by a blockquote.</p>
+<blockquote>
+<p>Who's brave enough to fly into something we all keep calling a death sphere?</p>
+</blockquote>
+<p>With more text.</p>
+</section>
+<section class="slide level1" id="section-2">
+<blockquote>
+<p>Loneliness is everything it's cracked up to be. — Alan Alda We are in paragraph elements.</p>
+</blockquote>
+</section>
+<section class="slide level1" id="section-3">
+<h2 id="images">Images</h2>
+</section>
+<section class="slide level1" id="section-4">
+<figure>
+<img src="http://placekitten.com/g/800/600" alt="figcaption on image"><figcaption>figcaption on image</figcaption>
+</figure>
+<p><details>Kittens are so cute!</details></p>
+</section>
+<section class="slide level1" id="pimg-p-a-...">
+<h1>(p&gt;img) + p A ...</h1>
+<p><img src="http://nafcflying.org/images/Test%20Icon.jpg" alt="Alt"> </p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</section>
+<section class="slide level1" id="pimg-p-b">
+<h1>(p&gt;img) + p B</h1>
+<p><img src="http://nafcflying.org/images/Test%20Icon.jpg" alt="Alt"> </p>
+<ul>
+<li>Lorem ipsum dolor</li>
+<li>sit amet, consectetur</li>
+<li>adipisicing elit</li>
+</ul>
+</section>
+<section class="slide level1" id="header-with-single-img">
+<h1>Header with single img</h1>
+<p><img src="http://nafcflying.org/images/Test%20Icon.jpg" alt="Alt"> </p>
+</section>
+<section class="slide level1" id="section-5">
+<p><img src="http://nafcflying.org/images/Test%20Icon.jpg" alt="Alt"> </p>
+</section>
+<section class="slide level1" id="section-6">
+<h2 id="video">Video</h2>
+</section>
+<section class="slide level1" id="section-7">
+<figure> <!-- Videos are automatically played -->
+    
+<video src="http://videos-cdn.mozilla.net/brand/Mozilla_Firefox_Manifesto_v0.2_640.webm" poster="http://www.mozilla.org/images/about/poster.jpg"></video> <figcaption>A video</figcaption>
+</figure>
+
+</section>
+<section class="slide level1" id="section-8">
+<iframe width="560" height="315" src="http://www.youtube.com/embed/mzPxo7Y6JyA" frameborder="0" allowfullscreen></iframe>
+</section>
+</section>
+<section class="slide level1" id="end">
+<h1>End!</h1>
 </section>
 
-<section>
-    <p>Some random text: But I've never been to the moon! You can see how I lived before I met you. Also Zoidberg.
-    I could if you hadn't turned on the light and shut off my stereo.</p>
-</section>
-
-<section>
-    <h3>An incremental list</h3>
-    <ul class="incremental">
-      <li>Item 1
-      <li>Item 2
-      <li>Item 3
-    </ul>
-    <details>Some notes. They are only visible using onstage shell.</details>
-</section>
-
-<section>
-  <blockquote>
-    Who's brave enough to fly into something we all keep calling a death sphere?
-  </blockquote>
-</section>
-
-<section>
-    <h2>Part two</h2>
-</section>
-
-<section>
-    <figure> <!-- Figures are used to display images and videos fullpage -->
-      <img src="http://placekitten.com/g/800/600">
-      <figcaption>An image</figcaption>
-    </figure>
-    <details>Kittens are so cute!</details>
-</section>
-
-<section>
-    <figure> <!-- Videos are automatically played -->
-      <video src="http://videos-cdn.mozilla.net/brand/Mozilla_Firefox_Manifesto_v0.2_640.webm" poster="http://www.mozilla.org/images/about/poster.jpg"></video>
-      <figcaption>A video</figcaption>
-    </figure>
-</section>
-
-<section>
-    <h2>End!</h2>
-</section>
-
-<!-- Your Style -->
+<!-- Reagle Class Style -->
 <!-- Define the style of your presentation -->
 
 <!-- Maybe a font from http://www.google.com/webfonts ? -->
-<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+<!-- <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'> -->
 
 <style>
   html, .view body { background-color: black; counter-reset: slideidx; }
@@ -69,7 +108,7 @@
   section, .view head > title {
       /* The font from Google */
       font-family: 'Oswald', arial, serif;
-      font-size: 30px;
+      font-size: 40px;
   }
 
   .view section:after {
@@ -85,37 +124,83 @@
     margin: 1em 0 1em 0;
   }
 
-  h1, h2 {
-    margin-top: 200px;
+  /* h1 and h2 are "centered" (180px down) Takahashi style */
+  h1, h2 { 
+    padding-top: 150px;
     text-align: center;
-    font-size: 80px;
+    font-size: 70px;
   }
-  h3 {
-    margin: 100px 0 50px 100px;
+  /* Whereas h2 is Black Takashi and can't take any children since 100% height */
+  h2 { 
+    height: 100%;
+    background-color: black;
+    color: white; 
+  }
+  /* h1 can take children and become a traditional slide */
+  h1:not(:only-child) { 
+    margin-top: -150px; /* at top of slide */
   }
 
-  ul {
-      margin: 50px 200px;
+  h3 {
+    margin: 100px 0 50px 75px;
   }
 
   p {
-    margin: 75px;
-    font-size: 50px;
+    margin: 25px;
+    font-size: 40px;
   }
 
+  ul {
+    margin: 50px 0px 0px 100px;
+    font-size: 90%; 
+  }
+
+  /* vertically "center" only children */
+  section > p:only-child, section > ul:only-child, section > ol:only-child, 
+    section > blockquote:only-child, section > iframe:only-child { 
+    margin-top: 120px;
+  }
+
+iframe, video, object{
+    display:block;
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
   blockquote {
-    height: 100%;
-    background-color: black;
-    color: white;
-    font-size: 60px;
-    padding: 50px;
+    width: 80%;
+    margin: 5px auto;
+    padding: 5px;
+    font-style: italic;
+    background: #f0f0f0;
+    border: 1px solid #e0e0e0;
   }
-  blockquote:before {
-    content: open-quote;
+
+  /* Images within a paragraph are floated to either side for variety */
+  section:nth-child(odd) > p:not(:only-child) > img {
+    float: right;
+    margin-top: 50px;
   }
-  blockquote:after {
-    content: close-quote;
+  section:nth-child(even) > p:not(:only-child) > img {
+    float: left;
+    margin-top: 50px;
   }
+
+  /* Lone images (or with a header) are centered*/
+  p:last-child > img:only-child {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1 + p:last-child > img:only-child {
+    display: block;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 
   /* Figures are displayed full-page, with the caption
      on top of the image/video */
@@ -131,8 +216,10 @@
     width: 100%; height: 100%;
   }
   figcaption {
-    margin: 70px;
+    bottom: 50px;
+    margin-left: 20px;
     font-size: 50px;
+    color: white; text-shadow: black 0.1em 0.1em 0.2em;
   }
 
   footer {
@@ -187,6 +274,7 @@
 
   /* The progressbar, at the bottom of the slides, show the global
      progress of the presentation. */
+  /* This doesn't really look right with black slides - reagle */
   #progress-bar {
     height: 2px;
     background: #AAA;
@@ -218,44 +306,15 @@
     margin-left: -400px; margin-top: -300px;
     position: absolute; top: 50%; left: 50%;
     overflow: hidden;
-    display: none;
   }
-  .view body {
-    position: static;
-    margin: 0; padding: 0;
-    width: 100%; height: 100%;
-    display: inline-block;
-    overflow: visible; overflow-x: hidden;
-    /* undo Dz.onresize */
-    transform: none !important;
-    -moz-transform: none !important;
-    -webkit-transform: none !important;
-    -o-transform: none !important;
-    -ms-transform: none !important;
-  }
-  .view head, .view head > title { display: block }
   section {
     position: absolute;
     pointer-events: none;
     width: 100%; height: 100%;
   }
-  .view section {
-    pointer-events: auto;
-    position: static;
-    width: 800px; height: 600px;
-    margin: -150px -200px;
-    float: left;
-
-    transform: scale(.4);
-    -moz-transform: scale(.4);
-    -webkit-transform: scale(.4);
-    -o-transform: scale(.4);
-    -ms-transform: scale(.4);
-  }
-  .view section > * { pointer-events: none; }
   section[aria-selected] { pointer-events: auto; }
   html { overflow: hidden; }
-  html.view { overflow: visible; }
+  body { display: none; }
   body.loaded { display: block; }
   .incremental {visibility: hidden; }
   .incremental[active] {visibility: visible; }
@@ -267,8 +326,15 @@
     -ms-transition: width 400ms linear 0s;
     transition: width 400ms linear 0s;
   }
-  .view #progress-bar {
-    display: none;
+  figure {
+    width: 100%;
+    height: 100%;
+  }
+  figure > * {
+    position: absolute;
+  }
+  figure > img, figure > video {
+    width: 100%; height: 100%;
   }
 </style>
 
@@ -277,7 +343,6 @@
     remoteWindows: [],
     idx: -1,
     step: 0,
-    html: null,
     slides: null,
     progressBar : null,
     params: {
@@ -287,16 +352,14 @@
 
   Dz.init = function() {
     document.body.className = "loaded";
-    this.slides = Array.prototype.slice.call($$("body > section"));
+    this.slides = $$("body > section");
     this.progressBar = $("#progress-bar");
-    this.html = document.body.parentNode;
     this.setupParams();
     this.onhashchange();
     this.setupTouchEvents();
     this.onresize();
-    this.setupView();
   }
-
+  
   Dz.setupParams = function() {
     var p = window.location.search.substr(1).split('&');
     p.forEach(function(e, i, a) {
@@ -346,10 +409,6 @@
       aEvent.preventDefault();
       this.goFullscreen();
     }
-    if (aEvent.keyCode == 79) { // o
-      aEvent.preventDefault();
-      this.toggleView();
-    }
   }
 
   /* Touch Events */
@@ -381,16 +440,6 @@
         }
       }
     }
-  }
-
-  Dz.setupView = function() {
-    document.body.addEventListener("click", function ( e ) {
-      if (!Dz.html.classList.contains("view")) return;
-      if (!e.target || e.target.nodeName != "SECTION") return;
-
-      Dz.html.classList.remove("view");
-      Dz.setCursor(Dz.slides.indexOf(e.target) + 1);
-    }, false);
   }
 
   /* Adapt the size of the slides to the window */
@@ -522,14 +571,6 @@
     var lastIdx = this.slides.length;
     var lastStep = this.slides[lastIdx - 1].$$('.incremental > *').length;
     this.setCursor(lastIdx, lastStep);
-  }
-
-  Dz.toggleView = function() {
-    this.html.classList.toggle("view");
-
-    if (this.html.classList.contains("view")) {
-      $("section[aria-selected]").scrollIntoView(true);
-    }
   }
 
   Dz.setSlide = function(aIdx) {
@@ -666,3 +707,5 @@
 
 </script>
 <!-- vim: set fdm=marker: }}} -->
+</body>
+</html>
