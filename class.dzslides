@@ -50,6 +50,7 @@ $endfor$
 <!-- Maybe a font from http://www.google.com/webfonts ? -->
 <!-- <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'> -->
 
+
 <style>
   html, .view body { background-color: black; counter-reset: slideidx; }
   body, .view section { background-color: white; border-radius: 12px }
@@ -77,7 +78,7 @@ $endfor$
   h1, h2 { 
     padding-top: 150px;
     text-align: center;
-    font-size: 70px;
+    font-size: 80px;
   }
   /* Whereas h2 is Black Takashi and can't take any children since 100% height */
   h2 { 
@@ -122,13 +123,17 @@ $endfor$
     padding: 0;
   }
 
-  /* vertically "center" only children */
-  section > p:only-child, section > ul:only-child, section > ol:only-child, 
-    section > blockquote:only-child, section > iframe:only-child { 
+  /* vertically "center" only children of section */
+  section > a:only-child,
+  section > blockquote:only-child, 
+  section > p:only-child, section > ul:only-child, 
+  section > ol:only-child, section > iframe:only-child { 
+    display: block;
     margin-top: 120px;
+/*     padding: 8px; background-color: yellow; */
   }
 
-iframe, video, object{
+  iframe, video, object {
     display:block;
     padding: 0px;
     margin-left: auto;
@@ -144,30 +149,37 @@ iframe, video, object{
     border: 1px solid #e0e0e0;
   }
 
-  /* Images within a paragraph are floated to either side for variety */
+  /* An image in a multi-element slide are floated to either side for variety */
   section:nth-child(odd) > p:not(:only-child) > img {
     float: right;
-    margin-top: 50px;
+    margin-top: 50px;   
+/*     padding: 6px; background: green; */
   }
   section:nth-child(even) > p:not(:only-child) > img {
     float: left;
-    margin-top: 50px;
+    margin-top: 50px;   
+/*     padding: 6px; background: green; */
   }
 
-  /* Lone images (or with a header) are centered*/
-  p:last-child > img:only-child {
+  /* Center lone (hypertexted) images*/
+  section > p:last-child > img:only-child,
+  section > a:last-child > img:only-child {
     display: block;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; 
+/*     padding: 4px; background: blue; */
   }
 
-  h1 + p:last-child > img:only-child {
+  /* Center header and lone (hypertexted) image*/
+  h1 + p:last-child > img:only-child,
+  h1 + a:last-child > img:only-child, 
+  h1 + p:last-child > a:only-child > img:only-child {
     display: block;
     float: none;
     margin-left: auto;
     margin-right: auto;
+/*     padding: 2px; background: red; */
   }
-
 
   /* Figures are displayed full-page, with the caption
      on top of the image/video */
@@ -244,7 +256,7 @@ iframe, video, object{
   /* This doesn't really look right with black slides - reagle */
   #progress-bar {
     height: 2px;
-    background: #AAA;
+    background: #0FF;
   }
 </style>
 

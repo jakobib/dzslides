@@ -43,7 +43,14 @@ With more text.
 --------
 
 > Loneliness is everything it's cracked up to be. — Alan Alda
+>
 > We are in paragraph elements.
+
+--------
+
+* A lone
+* unordered list
+* is just the thing
 
 --------
 
@@ -79,7 +86,21 @@ ut labore et dolore magna aliqua.
 
 ![Alt](http://nafcflying.org/images/Test%20Icon.jpg)\ 
 
+---------
+
+<a title="By Gabriel Ehrnst GRUNDIN (Own work) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AFlag_of_Esperanto.svg"><img width="512" alt="Flag of Esperanto" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Flag_of_Esperanto.svg/512px-Flag_of_Esperanto.svg.png"/></a>
+
+---------
+
+![Or this?](http://www.cowboybooks.com.au/pictures/puppetmaster.jpg)
+
 --------
+
+# Do you agree with the cultural imperialism thesis?
+
+[![Question](http://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Question_mark_alternate.svg/256px-Question_mark_alternate.svg.png)](http://commons.wikimedia.org/wiki/File%3AQuestion_mark_alternate.svg "By User:Stannered [Public domain], via Wikimedia Commons")
+
+---------
 
 ## Video
 

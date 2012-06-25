@@ -20,6 +20,7 @@
 </ul>
 </section>
 <section class="slide level1" id="section">
+
 <h2 id="text-styles">Text Styles</h2>
 </section>
 <section class="slide level1" id="traditional-style">
@@ -32,32 +33,45 @@
 <h1>white/black <a href="http://en.wikipedia.org/wiki/Takahashi_method">Takahashi</a> style (single h1)</h1>
 </section>
 <section class="slide level1" id="section-1">
+
 <h2 id="blackwhite-always-takashi-h2-w-no-children">black/white always Takashi (h2 w/ no children)</h2>
 </section>
 <section class="slide level1" id="traditional-w-quote">
 <h1>Traditional w/ quote</h1>
 <p>Some text followed by a blockquote.</p>
 <blockquote>
-<p>Who's brave enough to fly into something we all keep calling a death sphere?</p>
+<p>Who’s brave enough to fly into something we all keep calling a death sphere?</p>
 </blockquote>
 <p>With more text.</p>
 </section>
 <section class="slide level1" id="section-2">
+
 <blockquote>
-<p>Loneliness is everything it's cracked up to be. — Alan Alda We are in paragraph elements.</p>
+<p>Loneliness is everything it’s cracked up to be. — Alan Alda</p>
+<p>We are in paragraph elements.</p>
 </blockquote>
 </section>
 <section class="slide level1" id="section-3">
-<h2 id="images">Images</h2>
+
+<ul>
+<li>A lone</li>
+<li>unordered list</li>
+<li>is just the thing</li>
+</ul>
 </section>
 <section class="slide level1" id="section-4">
+
+<h2 id="images">Images</h2>
+</section>
+<section class="slide level1" id="section-5">
+
 <figure>
 <img src="http://placekitten.com/g/800/600" alt="figcaption on image"><figcaption>figcaption on image</figcaption>
 </figure>
 <p><details>Kittens are so cute!</details></p>
 </section>
-<section class="slide level1" id="pimg-p-a-...">
-<h1>(p&gt;img) + p A ...</h1>
+<section class="slide level1" id="pimg-p-a">
+<h1>(p&gt;img) + p A …</h1>
 <p><img src="http://nafcflying.org/images/Test%20Icon.jpg" alt="Alt"> </p>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 </section>
@@ -74,20 +88,38 @@
 <h1>Header with single img</h1>
 <p><img src="http://nafcflying.org/images/Test%20Icon.jpg" alt="Alt"> </p>
 </section>
-<section class="slide level1" id="section-5">
+<section class="slide level1" id="section-6">
+
 <p><img src="http://nafcflying.org/images/Test%20Icon.jpg" alt="Alt"> </p>
 </section>
-<section class="slide level1" id="section-6">
+<section class="slide level1" id="section-7">
+
+<a title="By Gabriel Ehrnst GRUNDIN (Own work) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AFlag_of_Esperanto.svg"><img width="512" alt="Flag of Esperanto" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Flag_of_Esperanto.svg/512px-Flag_of_Esperanto.svg.png"/></a>
+</section>
+<section class="slide level1" id="section-8">
+
+<figure>
+<img src="http://www.cowboybooks.com.au/pictures/puppetmaster.jpg" alt="Or this?"><figcaption>Or this?</figcaption>
+</figure>
+</section>
+<section class="slide level1" id="do-you-agree-with-the-cultural-imperialism-thesis">
+<h1>Do you agree with the cultural imperialism thesis?</h1>
+<p><a href="http://commons.wikimedia.org/wiki/File%3AQuestion_mark_alternate.svg" title="By User:Stannered [Public domain], via Wikimedia Commons"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Question_mark_alternate.svg/256px-Question_mark_alternate.svg.png" alt="Question"></a></p>
+</section>
+<section class="slide level1" id="section-9">
+
 <h2 id="video">Video</h2>
 </section>
-<section class="slide level1" id="section-7">
+<section class="slide level1" id="section-10">
+
 <figure> <!-- Videos are automatically played -->
     
 <video src="http://videos-cdn.mozilla.net/brand/Mozilla_Firefox_Manifesto_v0.2_640.webm" poster="http://www.mozilla.org/images/about/poster.jpg"></video> <figcaption>A video</figcaption>
 </figure>
 
 </section>
-<section class="slide level1" id="section-8">
+<section class="slide level1" id="section-11">
+
 <iframe width="560" height="315" src="http://www.youtube.com/embed/mzPxo7Y6JyA" frameborder="0" allowfullscreen></iframe>
 </section>
 </section>
@@ -101,6 +133,7 @@
 <!-- Maybe a font from http://www.google.com/webfonts ? -->
 <!-- <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'> -->
 
+
 <style>
   html, .view body { background-color: black; counter-reset: slideidx; }
   body, .view section { background-color: white; border-radius: 12px }
@@ -108,7 +141,7 @@
   section, .view head > title {
       /* The font from Google */
       font-family: 'Oswald', arial, serif;
-      font-size: 40px;
+      font-size: 35px;
   }
 
   .view section:after {
@@ -124,11 +157,11 @@
     margin: 1em 0 1em 0;
   }
 
-  /* h1 and h2 are "centered" (180px down) Takahashi style */
+  /* h1 and h2 are "centered" (Xpx down) Takahashi style */
   h1, h2 { 
     padding-top: 150px;
     text-align: center;
-    font-size: 70px;
+    font-size: 80px;
   }
   /* Whereas h2 is Black Takashi and can't take any children since 100% height */
   h2 { 
@@ -138,7 +171,9 @@
   }
   /* h1 can take children and become a traditional slide */
   h1:not(:only-child) { 
-    margin-top: -150px; /* at top of slide */
+    margin-top: -120px; /* at top of slide */
+    margin-bottom: 20px;
+    font-size: 60px; /* give slide a little more room */
   }
 
   h3 {
@@ -147,21 +182,41 @@
 
   p {
     margin: 25px;
-    font-size: 40px;
   }
-
-  ul {
-    margin: 50px 0px 0px 100px;
+  ol {
+    margin: 5px 0px 5px 100px;
     font-size: 90%; 
   }
-
-  /* vertically "center" only children */
-  section > p:only-child, section > ul:only-child, section > ol:only-child, 
-    section > blockquote:only-child, section > iframe:only-child { 
-    margin-top: 120px;
+  ul {
+    margin: 5px 0px 5px 50px;
+    font-size: 90%; 
+  }
+  dl {
+    margin: 5px 0px 5px 40px;
+    padding: 0;
   }
 
-iframe, video, object{
+  dt {
+    font-weight: bold;
+  }
+
+  dd {
+    font-size: 90%;
+    margin: 0 0 10px 15px;
+    padding: 0;
+  }
+
+  /* vertically "center" only children of section */
+  section > a:only-child,
+  section > blockquote:only-child, 
+  section > p:only-child, section > ul:only-child, 
+  section > ol:only-child, section > iframe:only-child { 
+    display: block;
+    margin-top: 120px;
+/*     padding: 8px; background-color: yellow; */
+  }
+
+  iframe, video, object {
     display:block;
     padding: 0px;
     margin-left: auto;
@@ -177,30 +232,37 @@ iframe, video, object{
     border: 1px solid #e0e0e0;
   }
 
-  /* Images within a paragraph are floated to either side for variety */
+  /* An image in a multi-element slide are floated to either side for variety */
   section:nth-child(odd) > p:not(:only-child) > img {
     float: right;
-    margin-top: 50px;
+    margin-top: 50px;   
+/*     padding: 6px; background: green; */
   }
   section:nth-child(even) > p:not(:only-child) > img {
     float: left;
-    margin-top: 50px;
+    margin-top: 50px;   
+/*     padding: 6px; background: green; */
   }
 
-  /* Lone images (or with a header) are centered*/
-  p:last-child > img:only-child {
+  /* Center lone (hypertexted) images*/
+  section > p:last-child > img:only-child,
+  section > a:last-child > img:only-child {
     display: block;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; 
+/*     padding: 4px; background: blue; */
   }
 
-  h1 + p:last-child > img:only-child {
+  /* Center header and lone (hypertexted) image*/
+  h1 + p:last-child > img:only-child,
+  h1 + a:last-child > img:only-child, 
+  h1 + p:last-child > a:only-child > img:only-child {
     display: block;
     float: none;
     margin-left: auto;
     margin-right: auto;
+/*     padding: 2px; background: red; */
   }
-
 
   /* Figures are displayed full-page, with the caption
      on top of the image/video */
@@ -277,7 +339,7 @@ iframe, video, object{
   /* This doesn't really look right with black slides - reagle */
   #progress-bar {
     height: 2px;
-    background: #AAA;
+    background: #0FF;
   }
 </style>
 
