@@ -46,11 +46,13 @@ With more text.
 >
 > We are in paragraph elements.
 
---------
+# Table: Match terms
 
-* A lone
-* unordered list
-* is just the thing
+term               definition
+----------------   ---------------
+1. ideology        a. maintenance of a consensus for inequality
+2. power           b. defining the view of the world
+3. hegemony        c. a way of seeing the world
 
 --------
 
@@ -58,43 +60,70 @@ With more text.
 
 --------
 
-![figcaption on image](http://placekitten.com/g/800/600)
+![figcaption 800/600 to scale](http://placekitten.com/g/800/600)
 
-<details>Kittens are so cute!</details>
+--------
+
+![figcaption 1200/800 squeezed](http://placekitten.com/g/1200/800)
+
+--------
+
+![figcaption 800/1200 stretched](http://placekitten.com/g/800/1200)
+
 
 # (p>img) + p A  ...
 
-![Alt](http://nafcflying.org/images/Test%20Icon.jpg)\ 
+![Alt a](http://placekitten.com/g/300/400)\ 
 
-Lorem ipsum dolor
-sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-ut labore et dolore magna aliqua.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 # (p>img) + p B
 
-![Alt](http://nafcflying.org/images/Test%20Icon.jpg)\ 
+![Alt b](http://placekitten.com/g/300/400)\ 
 
 * Lorem ipsum dolor
 * sit amet, consectetur 
 * adipisicing elit
 
-# Header with single img
+# (a>img) + p A  ...
 
-![Alt](http://nafcflying.org/images/Test%20Icon.jpg)\ 
+<a title="By Sasan Geranmehr (Own work) [CC-BY-3.0 (http://creativecommons.org/licenses/by/3.0)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3APersian_Cat_(kitten).jpg"><img width="256" alt="Persian Cat (kitten)" src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Persian_Cat_%28kitten%29.jpg/256px-Persian_Cat_%28kitten%29.jpg"/></a>
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+# h1 + 300/400 img
+
+![Alt c](http://placekitten.com/g/300/400)\ 
+
+# h1 + 1200/800 img
+
+![Alt d](http://placekitten.com/g/1200/800)\ 
+
 
 --------
 
-![Alt](http://nafcflying.org/images/Test%20Icon.jpg)\ 
+![Alt e](http://placekitten.com/g/1200/800)\ 
 
 ---------
 
-<a title="By Gabriel Ehrnst GRUNDIN (Own work) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AFlag_of_Esperanto.svg"><img width="512" alt="Flag of Esperanto" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Flag_of_Esperanto.svg/512px-Flag_of_Esperanto.svg.png"/></a>
+# WikiCommons photo
 
----------
-
-![Or this?](http://www.cowboybooks.com.au/pictures/puppetmaster.jpg)
+<a title="By Sasan Geranmehr (Own work) [CC-BY-3.0 (http://creativecommons.org/licenses/by/3.0)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3APersian_Cat_(kitten).jpg"><img width="256" alt="Persian Cat (kitten)" src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Persian_Cat_%28kitten%29.jpg/256px-Persian_Cat_%28kitten%29.jpg"/></a>
 
 --------
+
+#### Using h4 w/ 400/600
+
+![kitten 400/600](http://placekitten.com/g/400/600)\ 
+
+--------
+
+#### Using h4 w/ 1200/800
+
+![kitten 1200/800](http://placekitten.com/g/1200/800)\ 
+
+--------
+
 
 # Do you agree with the cultural imperialism thesis?
 

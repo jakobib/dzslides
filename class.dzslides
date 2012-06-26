@@ -88,9 +88,9 @@ $endfor$
   }
   /* h1 can take children and become a traditional slide */
   h1:not(:only-child) { 
-    margin-top: -120px; /* at top of slide */
+    margin-top: -120px; /* move up to top of slide */
     margin-left: 5px; margin-right: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-size: 60px; /* give slide a little more room */
   }
 
@@ -99,7 +99,7 @@ $endfor$
   }
 
   p {
-    margin: 25px;
+    margin-left: 25px;
   }
   ol {
     margin: 5px 0px 5px 100px;
@@ -124,13 +124,40 @@ $endfor$
     padding: 0;
   }
 
+  /* Tables */
+  table {
+    margin: 10px;
+    font-size: 80%;
+    border-width: 1px;
+    border-color: #666666;
+    border-collapse: collapse;
+  }
+  table th, table td {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #dedede;
+  }
+  table td {
+    background-color: #ffffff;
+  }
+
   /* vertically "center" only children of section */
-  section > a:only-child,
+  /* these elements don't tend to be too big, so down a lot */
+  section > table:only-child,
   section > blockquote:only-child, 
-  section > p:only-child, section > ul:only-child, 
-  section > ol:only-child, section > iframe:only-child { 
+  section > ul:only-child, 
+  section > ol:only-child {
     display: block;
     margin-top: 120px;
+/*     padding: 8px; background-color: yellow; */
+  }
+  /* these elements tend to be bigger, so down a little */
+  section > iframe:only-child,
+  section > p:only-child {
+    display: block;
+    margin-top: 40px;
 /*     padding: 8px; background-color: yellow; */
   }
 
@@ -151,15 +178,21 @@ $endfor$
   }
 
   /* An image in a multi-element slide are floated to either side for variety */
+  section:nth-child(odd) > a:not(:only-child) > img,
   section:nth-child(odd) > p:not(:only-child) > img {
     float: right;
-    margin-top: 50px;   
-/*     padding: 6px; background: green; */
+/*     margin-top: 50px;   */
+    padding: 0px 5px 0px 5px;
+    max-width: 400px; max-height: 300px; 
+/*     border: 2px solid green; */
   }
+  section:nth-child(even) > a:not(:only-child) > img,
   section:nth-child(even) > p:not(:only-child) > img {
     float: left;
-    margin-top: 50px;   
-/*     padding: 6px; background: green; */
+/*     margin-top: 50px;    */
+    padding: 0px 5px 0px 5px;
+    max-width: 400px; max-height: 300px; 
+/*     border: 2px solid green; */
   }
 
   /* Center lone (hypertexted) images*/
@@ -168,7 +201,8 @@ $endfor$
     display: block;
     margin-left: auto;
     margin-right: auto; 
-/*     padding: 4px; background: blue; */
+    max-width: 775px; max-height: 440px;
+/*     border: 4px solid blue; */
   }
 
   /* Center header and lone (hypertexted) image*/
@@ -179,7 +213,8 @@ $endfor$
     float: none;
     margin-left: auto;
     margin-right: auto;
-/*     padding: 2px; background: red; */
+    max-width: 775px; max-height: 440px;
+/*     border: 6px solid orange; */
   }
 
   /* Figures are displayed full-page, with the caption
@@ -202,6 +237,28 @@ $endfor$
     color: white; text-shadow: black 0.1em 0.1em 0.2em;
   }
 
+  /* Instead of using the caption, we can also use h4 as the overlay text */
+  h4 {
+    top: 480px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 200%;
+    z-index: 1;
+    color: white; text-shadow: black 0.1em 0.1em 0.2em;
+    text-align: center;
+  }
+  /* Center h4s lone (hypertexted) image*/
+  h4 + p:last-child img:only-child, 
+  h4 + a:last-child > img:only-child {
+    float: none;
+    /* 750px is needed to keep centered given parent <p>'s margins */
+    max-width: 750px; max-height: 600px; 
+    margin-left: auto; margin-right: auto;
+/*     border: 8px solid red; */
+  }
+
+  /* Footer */
   footer {
     position: absolute;
     bottom: 0;

@@ -9,5 +9,9 @@ pandoc --template=class.dzslides -t dzslides template.md \
 
 ## Issues
 
-1. The latest functionality of dzslides (such as overview mode) may not be in pandoc's `$dzslides-core$`. I've replaced `$dzslides-core$` with the latest from dzslides (escape all javascript `$` via `$$`.)
+1. The latest functionality of dzslides (such as overview mode) may not be in pandoc's `$dzslides-core$`. I've replaced `$dzslides-core$` with the latest from dzslides (first escaping all javascript `$` via `$$`.)
 2. Earlier versions of pandoc give every slide an `h1`, even if empty.You must remove empty `h1`s (`<h1></h1>`) until this is [fixed (#484)](https://github.com/jgm/pandoc/issues/484); this is easy to do with `sed`, as above.
+3. There's some ugly CSS trying to account for:
+    a. No easy vertical centers, so there's lots of margin futzing.
+    b. No easy image scaling.
+    c. Images might be in a link, if using WikimediaCommons images.
