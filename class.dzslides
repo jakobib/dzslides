@@ -670,6 +670,9 @@ $endfor$
     }
     if (next) {
       next.setAttribute("aria-selected", "true");
+      if (this.html.classList.contains("view")) {
+        next.scrollIntoView();
+      }
       var video = next.$$("video");
       if (video && !!+this.params.autoplay) {
         video.play();

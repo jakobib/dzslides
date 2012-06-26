@@ -798,9 +798,6 @@
         next.scrollIntoView();
       }
       var video = next.$("video");
-      if (this.html.classList.contains("view")) {
-        next.scrollIntoView();
-      }
       if (video && !!+this.params.autoplay) {
         video.play();
       }
