@@ -8,7 +8,7 @@
 <section>
   <h1 class="title">Example Presentation</h1>
   <h3 class="date"></h3>
-  <footer class="author">John Doe</footer>
+  <footer class="author">by John Doe</footer>
 </section>
 <section class="slide level1" id="outline">
 <h1>Outline</h1>
@@ -20,6 +20,7 @@
 </ul>
 </section>
 <section class="slide level1" id="section">
+
 <h2 id="text-styles">Text Styles</h2>
 </section>
 <section class="slide level1" id="traditional-style">
@@ -32,23 +33,26 @@
 <h1>white/black <a href="http://en.wikipedia.org/wiki/Takahashi_method">Takahashi</a> style (single h1)</h1>
 </section>
 <section class="slide level1" id="section-1">
+
 <h2 id="blackwhite-always-takashi-h2-w-no-children">black/white always Takashi (h2 w/ no children)</h2>
 </section>
 <section class="slide level1" id="traditional-w-quote">
 <h1>Traditional w/ quote</h1>
 <p>Some text followed by a blockquote.</p>
 <blockquote>
-<p>Who's brave enough to fly into something we all keep calling a death sphere?</p>
+<p>Who’s brave enough to fly into something we all keep calling a death sphere?</p>
 </blockquote>
 <p>With more text.</p>
 </section>
 <section class="slide level1" id="section-2">
+
 <blockquote>
-<p>Loneliness is everything it's cracked up to be. — Alan Alda</p>
+<p>Loneliness is everything it’s cracked up to be. — Alan Alda</p>
 <p>We are in paragraph elements.</p>
 </blockquote>
 </section>
 <section class="slide level1" id="section-3">
+
 <ul>
 <li>A lone</li>
 <li>unordered list</li>
@@ -56,16 +60,18 @@
 </ul>
 </section>
 <section class="slide level1" id="section-4">
+
 <h2 id="images">Images</h2>
 </section>
 <section class="slide level1" id="section-5">
+
 <figure>
 <img src="http://placekitten.com/g/800/600" alt="figcaption on image"><figcaption>figcaption on image</figcaption>
 </figure>
 <p><details>Kittens are so cute!</details></p>
 </section>
-<section class="slide level1" id="pimg-p-a-...">
-<h1>(p&gt;img) + p A ...</h1>
+<section class="slide level1" id="pimg-p-a">
+<h1>(p&gt;img) + p A …</h1>
 <p><img src="http://nafcflying.org/images/Test%20Icon.jpg" alt="Alt"> </p>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 </section>
@@ -83,12 +89,15 @@
 <p><img src="http://nafcflying.org/images/Test%20Icon.jpg" alt="Alt"> </p>
 </section>
 <section class="slide level1" id="section-6">
+
 <p><img src="http://nafcflying.org/images/Test%20Icon.jpg" alt="Alt"> </p>
 </section>
 <section class="slide level1" id="section-7">
+
 <a title="By Gabriel Ehrnst GRUNDIN (Own work) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3AFlag_of_Esperanto.svg"><img width="512" alt="Flag of Esperanto" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Flag_of_Esperanto.svg/512px-Flag_of_Esperanto.svg.png"/></a>
 </section>
 <section class="slide level1" id="section-8">
+
 <figure>
 <img src="http://www.cowboybooks.com.au/pictures/puppetmaster.jpg" alt="Or this?"><figcaption>Or this?</figcaption>
 </figure>
@@ -98,9 +107,11 @@
 <p><a href="http://commons.wikimedia.org/wiki/File%3AQuestion_mark_alternate.svg" title="By User:Stannered [Public domain], via Wikimedia Commons"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Question_mark_alternate.svg/256px-Question_mark_alternate.svg.png" alt="Question"></a></p>
 </section>
 <section class="slide level1" id="section-9">
+
 <h2 id="video">Video</h2>
 </section>
 <section class="slide level1" id="section-10">
+
 <figure> <!-- Videos are automatically played -->
     
 <video src="http://videos-cdn.mozilla.net/brand/Mozilla_Firefox_Manifesto_v0.2_640.webm" poster="http://www.mozilla.org/images/about/poster.jpg"></video> <figcaption>A video</figcaption>
@@ -108,6 +119,7 @@
 
 </section>
 <section class="slide level1" id="section-11">
+
 <iframe width="560" height="315" src="http://www.youtube.com/embed/mzPxo7Y6JyA" frameborder="0" allowfullscreen></iframe>
 </section>
 </section>
@@ -357,15 +369,44 @@
     margin-left: -400px; margin-top: -300px;
     position: absolute; top: 50%; left: 50%;
     overflow: hidden;
+    display: none;
   }
+  .view body {
+    position: static;
+    margin: 0; padding: 0;
+    width: 100%; height: 100%;
+    display: inline-block;
+    overflow: visible; overflow-x: hidden;
+    /* undo Dz.onresize */
+    transform: none !important;
+    -moz-transform: none !important;
+    -webkit-transform: none !important;
+    -o-transform: none !important;
+    -ms-transform: none !important;
+  }
+  .view head, .view head > title { display: block }
   section {
     position: absolute;
     pointer-events: none;
     width: 100%; height: 100%;
   }
+  .view section {
+    pointer-events: auto;
+    position: static;
+    width: 800px; height: 600px;
+    margin: -150px -200px;
+    float: left;
+
+    transform: scale(.4);
+    -moz-transform: scale(.4);
+    -webkit-transform: scale(.4);
+    -o-transform: scale(.4);
+    -ms-transform: scale(.4);
+  }
+  .view section > * { pointer-events: none; }
   section[aria-selected] { pointer-events: auto; }
   html { overflow: hidden; }
-  body { display: none; }
+  html.view { overflow: visible; }
   body.loaded { display: block; }
   .incremental {visibility: hidden; }
   .incremental[active] {visibility: visible; }
@@ -377,15 +418,8 @@
     -ms-transition: width 400ms linear 0s;
     transition: width 400ms linear 0s;
   }
-  figure {
-    width: 100%;
-    height: 100%;
-  }
-  figure > * {
-    position: absolute;
-  }
-  figure > img, figure > video {
-    width: 100%; height: 100%;
+  .view #progress-bar {
+    display: none;
   }
 </style>
 
@@ -394,6 +428,7 @@
     remoteWindows: [],
     idx: -1,
     step: 0,
+    html: null,
     slides: null,
     progressBar : null,
     params: {
@@ -403,14 +438,16 @@
 
   Dz.init = function() {
     document.body.className = "loaded";
-    this.slides = $$("body > section");
+    this.slides = Array.prototype.slice.call($$("body > section"));
     this.progressBar = $("#progress-bar");
+    this.html = document.body.parentNode;
     this.setupParams();
     this.onhashchange();
     this.setupTouchEvents();
     this.onresize();
+    this.setupView();
   }
-  
+
   Dz.setupParams = function() {
     var p = window.location.search.substr(1).split('&');
     p.forEach(function(e, i, a) {
@@ -460,6 +497,10 @@
       aEvent.preventDefault();
       this.goFullscreen();
     }
+    if (aEvent.keyCode == 79) { // o
+      aEvent.preventDefault();
+      this.toggleView();
+    }
   }
 
   /* Touch Events */
@@ -491,6 +532,16 @@
         }
       }
     }
+  }
+
+  Dz.setupView = function() {
+    document.body.addEventListener("click", function ( e ) {
+      if (!Dz.html.classList.contains("view")) return;
+      if (!e.target || e.target.nodeName != "SECTION") return;
+
+      Dz.html.classList.remove("view");
+      Dz.setCursor(Dz.slides.indexOf(e.target) + 1);
+    }, false);
   }
 
   /* Adapt the size of the slides to the window */
@@ -622,6 +673,14 @@
     var lastIdx = this.slides.length;
     var lastStep = this.slides[lastIdx - 1].$$('.incremental > *').length;
     this.setCursor(lastIdx, lastStep);
+  }
+
+  Dz.toggleView = function() {
+    this.html.classList.toggle("view");
+
+    if (this.html.classList.contains("view")) {
+      $("section[aria-selected]").scrollIntoView(true);
+    }
   }
 
   Dz.setSlide = function(aIdx) {
@@ -757,6 +816,6 @@
   }
 
 </script>
-<!-- vim: set fdm=marker: }}} -->
+
 </body>
 </html>

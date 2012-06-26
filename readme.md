@@ -9,7 +9,5 @@ pandoc --template=class.dzslides -t dzslides template.md \
 
 ## Issues
 
-This is not so much a fork of dzslides, but a fork of pandoc's built-in dzslides. This means:
-
-1. Newer functionality of dzslides (such as overview mode) doesn't work until pandoc's `$dzslides-core$` is updated to include it.
-2. You must remove empty H1s (`<h1></h1>`) until this is fixed in pandoc; this is easy to do with `sed`, as above.
+1. The latest functionality of dzslides (such as overview mode) may not be in pandoc's `$dzslides-core$`. I've replaced `$dzslides-core$` with the latest from dzslides (escape all javascript `$` via `$$`.)
+2. Earlier versions of pandoc give every slide an `h1`, even if empty.You must remove empty `h1`s (`<h1></h1>`) until this is [fixed (#484)](https://github.com/jgm/pandoc/issues/484); this is easy to do with `sed`, as above.
