@@ -100,6 +100,7 @@ $endfor$
 
   p {
     margin-left: 25px;
+    margin-bottom: 10px;
   }
   ol {
     margin: 5px 0px 5px 100px;
@@ -157,7 +158,7 @@ $endfor$
   section > iframe:only-child,
   section > p:only-child {
     display: block;
-    margin-top: 40px;
+    margin-top: 60px;
 /*     padding: 8px; background-color: yellow; */
   }
 
