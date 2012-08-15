@@ -198,7 +198,8 @@ $endfor$
 
   /* Center lone (hypertexted) images*/
   section > p:last-child > img:only-child,
-  section > a:last-child > img:only-child {
+  section > a:last-child > img:only-child,
+  section > p:last-child > a:only-child > img:only-child {
     display: block;
     margin-left: auto;
     margin-right: auto; 
