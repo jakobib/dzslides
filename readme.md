@@ -8,6 +8,7 @@ pandoc --template=class.dzslides -t dzslides --standalone template.md > template
 
 ## Image Tips
 
+````
 **stretch image to fill screen; alt is overlay**
     ![overlay](media/img.jpg)
 **constrain image; h4 is overlay**
@@ -16,6 +17,7 @@ pandoc --template=class.dzslides -t dzslides --standalone template.md > template
     ![alt](media/img.jpg)\ 
 **large image with text underneath**
     # ![](media/beat-up-Anita-Sarkeesian.jpg)\ \ntext
+````
 
 ## Issues
 
