@@ -156,7 +156,8 @@ $endfor$
   }
   /* these elements tend to be bigger, so down a little */
   section > iframe:only-child,
-  section > p:only-child {
+  section > p:only-child,
+  section > a:only-child { /* includes wikicommon a/img */
     display: block;
     margin-top: 60px;
 /*     padding: 8px; background-color: yellow; */

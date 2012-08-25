@@ -131,7 +131,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 # Do you agree with the cultural imperialism thesis?
 
-[![Question](http://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Question_mark_alternate.svg/256px-Question_mark_alternate.svg.png)](http://commons.wikimedia.org/wiki/File%3AQuestion_mark_alternate.svg "By User:Stannered [Public domain], via Wikimedia Commons")
+[![Question](http://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Question_mark_alternate.svg/128px-Question_mark_alternate.svg.png)](http://commons.wikimedia.org/wiki/File%3AQuestion_mark_alternate.svg "By User:Stannered [Public domain], via Wikimedia Commons")
 
 ---------
 
