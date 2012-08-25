@@ -204,7 +204,7 @@
 
   /* h1 and h2 are "centered" (Xpx down) Takahashi style */
   h1, h2 { 
-    padding-top: 150px;
+    padding-top: 130px;
     text-align: center;
     font-size: 80px;
   }
@@ -327,6 +327,7 @@
   }
 
 
+  /*******************************************************/
   /* Center lone (hypertexted) images*/
   section > p:last-child > img:only-child,
   section > a:last-child > img:only-child,
@@ -351,7 +352,8 @@
   }
 
 
-  /* Figures are displayed full-page, with the caption
+  /*******************************************************/
+  /* Figures are stretched full-page, with the caption
      on top of the image/video */
   figure {
     background-color: black;
@@ -380,17 +382,24 @@
     width: 80%;
   }
 
-
-  /* Instead of using the caption, we can also use h4 as the overlay text */
+  /*******************************************************/
+  /* h4 + imgs are constrained (not stretched) and overlayed with text */
   h4 {
-    top: 480px;
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    font-size: 200%;
+    font-size: 50px;
     z-index: 1;
     color: white; text-shadow: black 0.1em 0.1em 0.2em;
     text-align: center;
+  }
+  section:nth-child(odd) h4 {
+    top: 470px;
+    left: 05px;
+  }
+  section:nth-child(even) h4 {
+    top: 20px;
+    right: 05px;
   }
   /* Center h4s lone (hypertexted) image*/
   h4 + p:last-child img:only-child, 
@@ -398,11 +407,13 @@
   h4 + p:last-child > a:only-child > img:only-child  {
     float: none;
     /* 750px is needed to keep centered given parent <p>'s margins */
-    max-width: 750px; max-height: 600px; 
+    max-width: 750px; max-height: 600px;  /* but don't stretch it */
     margin-left: auto; margin-right: auto;
 /*     border: 8px solid red; */
   }
 
+
+  /*******************************************************/
   /* Footer */
   footer {
     position: absolute;
@@ -460,6 +471,85 @@
   #progress-bar {
     height: 2px;
     background: #0FF;
+  }
+</style>
+
+<!-- {{{{ dzslides core
+#
+#
+#     __  __  __       .  __   ___  __
+#    |  \  / /__` |    | |  \ |__  /__`
+#    |__/ /_ .__/ |___ | |__/ |___ .__/ core :€
+#
+#
+# The following block of code is not supposed to be edited.
+# But if you want to change the behavior of these slides,
+# feel free to hack it!
+#
+-->
+
+<div id="progress-bar"></div>
+
+<!-- Default Style -->
+<style>
+  * { margin: 0; padding: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+  details { display: none; }
+  body {
+    width: 800px; height: 600px;
+    margin-left: -400px; margin-top: -300px;
+    position: absolute; top: 50%; left: 50%;
+    overflow: hidden;
+    display: none;
+  }
+  .view body {
+    position: static;
+    margin: 0; padding: 0;
+    width: 100%; height: 100%;
+    display: inline-block;
+    overflow: visible; overflow-x: hidden;
+    /* undo Dz.onresize */
+    transform: none !important;
+    -moz-transform: none !important;
+    -webkit-transform: none !important;
+    -o-transform: none !important;
+    -ms-transform: none !important;
+  }
+  .view head, .view head > title { display: block }
+  section {
+    position: absolute;
+    pointer-events: none;
+    width: 100%; height: 100%;
+  }
+  .view section {
+    pointer-events: auto;
+    position: static;
+    width: 800px; height: 600px;
+    margin: -150px -200px;
+    float: left;
+
+    transform: scale(.4);
+    -moz-transform: scale(.4);
+    -webkit-transform: scale(.4);
+    -o-transform: scale(.4);
+    -ms-transform: scale(.4);
+  }
+  .view section > * { pointer-events: none; }
+  section[aria-selected] { pointer-events: auto; }
+  html { overflow: hidden; }
+  html.view { overflow: visible; }
+  body.loaded { display: block; }
+  .incremental {visibility: hidden; }
+  .incremental[active] {visibility: visible; }
+  #progress-bar{
+    bottom: 0;
+    position: absolute;
+    -moz-transition: width 400ms linear 0s;
+    -webkit-transition: width 400ms linear 0s;
+    -ms-transition: width 400ms linear 0s;
+    transition: width 400ms linear 0s;
+  }
+  .view #progress-bar {
+    display: none;
   }
 </style>
 
