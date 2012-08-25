@@ -110,6 +110,10 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 <a title="By Sasan Geranmehr (Own work) [CC-BY-3.0 (http://creativecommons.org/licenses/by/3.0)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3APersian_Cat_(kitten).jpg"><img width="256" alt="Persian Cat (kitten)" src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Persian_Cat_%28kitten%29.jpg/256px-Persian_Cat_%28kitten%29.jpg"/></a>
 
+---------
+
+<a title="By Sasan Geranmehr (Own work) [CC-BY-3.0 (http://creativecommons.org/licenses/by/3.0)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3APersian_Cat_(kitten).jpg"><img width="256" alt="Persian Cat (kitten)" src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Persian_Cat_%28kitten%29.jpg/256px-Persian_Cat_%28kitten%29.jpg"/></a>
+
 --------
 
 #### Using h4 w/ 400/600

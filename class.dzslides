@@ -178,6 +178,7 @@ $endfor$
     border: 1px solid #e0e0e0;
   }
 
+  /********************** Images **************************/
   /* An image in a multi-element slide are floated to either side for variety */
   section:nth-child(odd) > a:not(:only-child) > img,
   section:nth-child(odd) > p:not(:only-child) > img {
@@ -195,6 +196,7 @@ $endfor$
     max-width: 400px; max-height: 300px; 
 /*     border: 2px solid green; */
   }
+
 
   /* Center lone (hypertexted) images*/
   section > p:last-child > img:only-child,
@@ -218,6 +220,7 @@ $endfor$
     max-width: 775px; max-height: 440px;
 /*     border: 6px solid orange; */
   }
+
 
   /* Figures are displayed full-page, with the caption
      on top of the image/video */
@@ -248,6 +251,7 @@ $endfor$
     width: 80%;
   }
 
+
   /* Instead of using the caption, we can also use h4 as the overlay text */
   h4 {
     top: 480px;
@@ -261,7 +265,8 @@ $endfor$
   }
   /* Center h4s lone (hypertexted) image*/
   h4 + p:last-child img:only-child, 
-  h4 + a:last-child > img:only-child {
+  h4 + a:last-child > img:only-child,
+  h4 + p:last-child > a:only-child > img:only-child  {
     float: none;
     /* 750px is needed to keep centered given parent <p>'s margins */
     max-width: 750px; max-height: 600px; 
