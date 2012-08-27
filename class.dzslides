@@ -52,12 +52,14 @@ $endfor$
 
 
 <style>
-  html, .view body { background-color: black; counter-reset: slideidx; }
+  html, .view body { 
+    background-color: black; 
+    font-family: arial, sans-serif;
+    counter-reset: slideidx; }
   body, .view section { background-color: white; border-radius: 12px }
   /* A section is a slide. It's size is 800x600, and this will never change */
   section, .view head > title {
-      /* The font from Google */
-      font-family: 'Oswald', arial, serif;
+      font-family: arial, sans-serif;
       font-size: 35px;
   }
 
@@ -284,6 +286,41 @@ $endfor$
 /*     border: 8px solid red; */
   }
 
+  /***********************************************************/
+  /* h5 + imgs are full page (like figure/captions), but     */
+  /* permit the image to be hypertexted, which pandoc will   */
+  /* not generate as it only creates figure/captions when    */
+  /* they appear on their own line. */
+  h5 {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 50px;
+    z-index: 1;
+    color: white; text-shadow: black 0.1em 0.1em 0.2em;
+    text-align: center;
+  }
+  section:nth-child(odd) h5 {
+    bottom: 20px;
+    left: 20px;
+    text-align:left;
+  }
+  section:nth-child(even) h5 {
+    top: 10px;
+    right: 10px;
+    text-align:right;
+    width: 80%;
+  }
+  h5 + p:last-child img:only-child, 
+  h5 + a:last-child > img:only-child  {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    max-width: 800px;
+    max-height: 600px;
+    position: absolute;
+    width: 100%; height: 100%;
+  }
 
   /*******************************************************/
   /* Footer */
