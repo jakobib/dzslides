@@ -58,19 +58,6 @@ term               definition
 
 ## Images
 
---------
-
-![figcaption 800/600 to scale](http://placekitten.com/g/800/600)
-
---------
-
-![figcaption 1200/800 squeezed](http://placekitten.com/g/1200/800)
-
---------
-
-![figcaption 800/1200 stretched](http://placekitten.com/g/800/1200)
-
-
 # (p>img) + p A  ...
 
 ![Alt a](http://placekitten.com/g/300/400)\ 
@@ -99,7 +86,6 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 ![Alt d](http://placekitten.com/g/1200/800)\ 
 
-
 --------
 
 ![Alt e](http://placekitten.com/g/1200/800)\ 
@@ -116,17 +102,51 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 --------
 
-#### Using h4 w/ 400/600
+#### Using h4 w/ 800/600
 
-![kitten 400/600](http://placekitten.com/g/400/600)\ 
+![kitten 800/600](http://placekitten.com/g/800/600)\ 
 
 --------
+
+#### Using h4 w/ hypertexted 800/600
+
+[![kitten 800/600](http://placekitten.com/g/800/600)](http://placekitten.com/)
+
+--------
+
+#### Using h4 w/ hypertexted WC
+
+<a title="21655 at en.wikipedia [CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0) or GFDL (http://www.gnu.org/copyleft/fdl.html)], from Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3A.01_Cabal.png"><img width="512" alt=".01 Cabal" src="//upload.wikimedia.org/wikipedia/commons/0/02/.01_Cabal.png"/></a>
+
+---------
 
 #### Using h4 w/ 1200/800
 
 ![kitten 1200/800](http://placekitten.com/g/1200/800)\ 
 
 --------
+
+![figcaption 800/600 to scale](http://placekitten.com/g/800/600)
+
+--------
+
+![figcaption 1200/800 squeezed](http://placekitten.com/g/1200/800)
+
+--------
+
+![figcaption 800/1200 stretched](http://placekitten.com/g/800/1200)
+
+---------
+
+##### Using h5 w/ 400/600
+
+![kitten 400/600](http://placekitten.com/g/400/600)\ 
+
+--------
+
+##### Using h5 w/ 1200/800
+
+![kitten 1200/800](http://placekitten.com/g/1200/800)\ 
 
 
 # Do you agree with the cultural imperialism thesis?
