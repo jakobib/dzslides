@@ -1,6 +1,6 @@
 
 
-The [pandoc](http://johnmacfarlane.net/pandoc/README.html) markdown file (`template.md`) and pandoc template (`class.dzslides`) can be used to generate a [dzslides](http://paulrouget.com/dzslides/) deck (`template.html`). This generated deck includes a wider range of slides types than the default dzslides `template.html` (e.g., traditional, [Takahashi](http://en.wikipedia.org/wiki/Takahashi_method) black and white; images with shadowed overlay, centered, and floated left and right).
+The [pandoc](http://johnmacfarlane.net/pandoc/README.html) markdown file (`template.md`) and pandoc template (`class.dzslides`) can be used to generate a [dzslides](http://paulrouget.com/dzslides/) deck (`template.html`). This generated deck includes a wider range of slides types than the default dzslides `template.html` (e.g., traditional, [Takahashi](http://en.wikipedia.org/wiki/Takahashi_method) black and white; images with shadowed overlay ([PechaKucha](http://en.wikipedia.org/wiki/PechaKucha)), centered, and floated left and right).
 
 ~~~~
 pandoc --template=class.dzslides -t dzslides --standalone template.md > template.html
@@ -9,14 +9,14 @@ pandoc --template=class.dzslides -t dzslides --standalone template.md > template
 ## Image Tips
 
 ````
-stretch image to fill screen; alt is overlay
-    ![overlay](media/img.jpg)
-constrain image; h4 is overlay
-    #### overlay + img
 regular image
     ![alt](media/img.jpg)\ 
-large image with text underneath
-    # ![](media/beat-up-Anita-Sarkeesian.jpg)\ \ntext
+stretch image to fill screen; alt is overlay
+    ![overlay](media/img.jpg)
+stretch image to fill screen; h4 is overlay
+    #### overlay + ![alt](media/img.jpg)
+constrain image; h5 is overlay
+    ##### overlay + ![alt](media/img.jpg)
 ````
 
 ## Issues
