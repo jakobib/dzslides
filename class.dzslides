@@ -110,6 +110,7 @@ $endfor$
   }
   ul {
     margin: 5px 0px 5px 50px;
+    padding-left: 1em;
     font-size: 90%; 
   }
   dl {
@@ -176,9 +177,9 @@ $endfor$
     width: 80%;
     margin: 5px auto;
     padding: 5px;
-    font-style: italic;
     background: #f0f0f0;
     border: 1px solid #e0e0e0;
+    border-left:5px solid #ccc;
   }
 
   /********************************************************/
@@ -376,6 +377,7 @@ $endfor$
   section[aria-selected] ~ section { left: +150%; }
 
   /* Incremental elements */
+  ul.incremental { border-left: 10px #f6f6f6 solid}
 
   /* By default, visible */
   .incremental > * { opacity: 1; }
@@ -384,7 +386,7 @@ $endfor$
   .incremental > *[aria-selected] { opacity: 1; }
 
   /* The items to-be-selected */
-  .incremental > *[aria-selected] ~ * { opacity: 0; }
+  .incremental > *[aria-selected] ~ * { opacity: 0.0; }
 
   /* The progressbar, at the bottom of the slides, show the global
      progress of the presentation. */
