@@ -128,6 +128,13 @@ $endfor$
     padding: 0;
   }
 
+  /* Links */
+  a           { text-decoration: none; }
+  a:link      { color: #306; }
+  a:visited   { color: #303; }
+  a:active    { color: #06c; background: #FFFFCC; }
+  a:hover     { color: navy; background-color: #dbe8b9; }
+
   /* Tables */
   table {
     margin: 10px;
