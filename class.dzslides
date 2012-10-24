@@ -100,7 +100,7 @@ $endfor$
     margin: 100px 0 50px 75px;
   }
 
-  p {
+  p, pre {
     margin-left: 25px;
     margin-bottom: 10px;
   }
@@ -130,10 +130,10 @@ $endfor$
 
   /* Links */
   a           { text-decoration: none; }
-  a:link      { color: #306; }
-  a:visited   { color: #303; }
+  a:link      { color: black; border-bottom: 1px solid #BADBD9}
+  a:visited   { color: black; border-bottom: 1px solid #CAEEEC}
   a:active    { color: #06c; background: #FFFFCC; }
-  a:hover     { color: navy; background-color: #dbe8b9; }
+  a:hover     { color: black; background-color: #D8FFFD; }
 
   /* Tables */
   table {
