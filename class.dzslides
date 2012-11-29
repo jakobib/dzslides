@@ -53,7 +53,7 @@ $endfor$
 
 <style>
   html, .view body { 
-    background-color: red; 
+    background-color: black; 
     font-family: arial, sans-serif;
     counter-reset: slideidx; }
   body, .view section { background-color: white; border-radius: 12px }
