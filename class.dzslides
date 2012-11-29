@@ -84,8 +84,8 @@ $endfor$
     background-color: white;
     color: black; 
   }
-  /* h1 and h2 are "centered" (Xpx down) Takahashi style */
-  h1, h2 { 
+  /* h1 is "centered" (Xpx down) Takahashi style */
+  h1 { 
     padding-top: 130px;
     text-align: center;
     font-size: 80px;
@@ -131,11 +131,8 @@ $endfor$
   }
 
   /* Links */
-  a           { text-decoration: none; }
-  a:link      { color: inherit; border-bottom: 1px solid #BADBD9}
-  a:visited   { color: inherit; border-bottom: 1px solid #CAEEEC}
-  a:active    { color: #06c; background: #FFFFCC; }
-  a:hover     { color: inherit; background-color: #D8FFFD; }
+  a         { text-decoration: none; }
+  a:link    { color: #2F4F4F;}
 
   /* Tables */
   table {
