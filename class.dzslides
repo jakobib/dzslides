@@ -53,7 +53,7 @@ $endfor$
 
 <style>
   html, .view body { 
-    background-color: black; 
+    background-color: red; 
     font-family: arial, sans-serif;
     counter-reset: slideidx; }
   body, .view section { background-color: white; border-radius: 12px }
@@ -76,19 +76,21 @@ $endfor$
     margin: 1em 0 1em 0;
   }
 
+  section.level1 {
+    background-color: black;
+    color: white; 
+  }
+  section.level2 {
+    background-color: white;
+    color: black; 
+  }
   /* h1 and h2 are "centered" (Xpx down) Takahashi style */
   h1, h2 { 
     padding-top: 130px;
     text-align: center;
     font-size: 80px;
   }
-  /* Whereas h2 is Black Takashi and can't take any children since 100% height */
-  h2 { 
-    height: 100%;
-    background-color: black;
-    color: white; 
-  }
-  /* h1 can take children and become a traditional slide */
+  /* if h1 has children, become a traditional slide */
   h1:not(:only-child) { 
     margin-top: -120px; /* move up to top of slide */
     margin-left: 5px; margin-right: 5px;
@@ -130,10 +132,10 @@ $endfor$
 
   /* Links */
   a           { text-decoration: none; }
-  a:link      { color: black; border-bottom: 1px solid #BADBD9}
-  a:visited   { color: black; border-bottom: 1px solid #CAEEEC}
+  a:link      { color: inherit; border-bottom: 1px solid #BADBD9}
+  a:visited   { color: inherit; border-bottom: 1px solid #CAEEEC}
   a:active    { color: #06c; background: #FFFFCC; }
-  a:hover     { color: black; background-color: #D8FFFD; }
+  a:hover     { color: inherit; background-color: #D8FFFD; }
 
   /* Tables */
   table {
@@ -273,11 +275,11 @@ $endfor$
   }
 
   /***********************************************************/
-  /* h4 + imgs are full page (like figure/captions), but     
+  /* section.level2 > h4 + imgs are full page (like figure/captions), but     
     permit the image to be hypertextual, i.e., appear
     within an <a> element in the paragraph.  
   */
-  h4 {
+  section.level2 > h4 {
     position: absolute;
     margin-left: auto;
     margin-right: auto;
@@ -286,20 +288,20 @@ $endfor$
     color: white; text-shadow: black 0.1em 0.1em 0.2em;
     text-align: center;
   }
-  section:nth-child(odd) h4 {
-    bottom: 20px;
+  section.level2:nth-child(odd) h4 {
+    bottom: 10px;
     left: 20px;
     text-align:left;
   }
-  section:nth-child(even) h4 {
-    top: 10px;
+  section.level2:nth-child(even) h4 {
+    top: 20px;
     right: 10px;
     text-align:right;
     width: 80%;
   }
-  h4 + p:last-child > img:only-child, 
-  h4 + a:last-child > img:only-child,  
-  h4 + p:last-child > a:last-child > img:only-child {
+  section.level2 > h4 + p:last-child > img:only-child, 
+  section.level2 > h4 + a:last-child > img:only-child,  
+  section.level2 > h4 + p:last-child > a:last-child > img:only-child {
     display: block;
     padding: 0px;
     max-width: 800px;
@@ -307,13 +309,15 @@ $endfor$
     position: absolute;
     width: 100%; height: 100%;
   }
-  h4 + p:last-child {
+  section.level2 > h4 + p:last-child {
     margin-left: 0px; /* reset p's left margin */
   }
 
   /*******************************************************/
-  /* h5 + imgs are constrained (not stretched) and overlayed with text */
-  h5 {
+  /* section.level2 > h5 + imgs are constrained (not 
+    stretched) and overlayed with text 
+  */
+  section.level2 > h5 {
     position: absolute;
     margin-left: auto;
     margin-right: auto;
@@ -322,18 +326,18 @@ $endfor$
     color: white; text-shadow: black 0.1em 0.1em 0.2em;
     text-align: center;
   }
-  section:nth-child(odd) h5 {
+  section.level2:nth-child(odd) h5 {
     top: 470px;
     left: 05px;
   }
-  section:nth-child(even) h5 {
+  section.level2:nth-child(even) h5 {
     top: 20px;
     right: 05px;
   }
-  /* Center h5s lone (hypertexted) image*/
-  h5 + p:last-child img:only-child, 
-  h5 + a:last-child > img:only-child,
-  h5 + p:last-child > a:only-child > img:only-child  {
+  /* Center h4s lone (hypertexted) image*/
+  section.level2 > h5 + p:last-child img:only-child, 
+  section.level2 > h5 + a:last-child > img:only-child,
+  section.level2 > h5 + p:last-child > a:only-child > img:only-child  {
     float: none;
     /* 750px is needed to keep centered given parent <p>'s margins */
     max-width: 750px; max-height: 600px;  /* but don't stretch it */
