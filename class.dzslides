@@ -193,14 +193,16 @@ $endfor$
 
   /* An image in a multi-element slide are floated to either side for variety */
   section:nth-child(odd) > a:not(:only-child) > img,
-  section:nth-child(odd) > p:not(:only-child) > img {
+  section:nth-child(odd) > p:not(:only-child) > img, 
+  section:nth-child(odd) > p:not(:only-child) > a > img {
     float: right;
     padding: 0px 5px 0px 5px;
     max-width: 400px; max-height: 300px; 
 /*     border: 2px solid green; */
   }
   section:nth-child(even) > a:not(:only-child) > img,
-  section:nth-child(even) > p:not(:only-child) > img {
+  section:nth-child(even) > p:not(:only-child) > img,
+  section:nth-child(even) > p:not(:only-child) > a > img {
     float: left;
     margin: 0px 40px 10px 0px;
     padding: 0px 5px 0px 5px;
@@ -339,7 +341,7 @@ $endfor$
     /* 750px is needed to keep centered given parent <p>'s margins */
     max-width: 750px; max-height: 600px;  /* but don't stretch it */
     margin-left: auto; margin-right: auto;
-/*     border: 8px solid red; */
+    /*border:*/ 8px solid red;
   }
 
 
