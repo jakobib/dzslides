@@ -32,7 +32,7 @@ $if(title)$
   <h1 class="title">$title$</h1>
   <h3 class="date">$date$</h3>
 $for(author)$
-  <footer class="author">by $author$</footer>
+  <h3 class="author">$author$</h3>
 $endfor$
 </section>
 $endif$
@@ -57,8 +57,6 @@ $endfor$
 # feel free to hack it!
 #
 -->
-
-<div id="progress-bar"></div>
 
 <!-- Default Style -->
 <style>
@@ -137,7 +135,13 @@ $endfor$
 #
 -->
 
-<div id="progress-bar"></div>
+<footer>
+  <div id="progress-bar"></div>
+  $for(author)$$author$$sep$, $endfor$ 
+  $if(date)$($date$)$endif$
+  $if(title)$: $title$$endif$
+  [<span id="slidenumber">1</span>]
+</footer>
 
 <!-- Default Style -->
 <style>
@@ -225,6 +229,7 @@ $endfor$
     this.setupTouchEvents();
     this.onresize();
     this.setupView();
+    this.slidenumber = $$('#slidenumber');
   }
 
   Dz.setupParams = function() {
@@ -538,6 +543,9 @@ $endfor$
         slideSize = 100 / (this.slides.length - 1),
         stepSize = slideSize / steps;
     this.progressBar.style.width = ((aIdx - 1) * slideSize + aStep * stepSize) + '%';
+    if (this.slidenumber) {
+        this.slidenumber.innerHTML = aIdx;
+    }
   }
   
   Dz.postMsg = function(aWin, aMsg) { // [arg0, [arg1...]]

@@ -299,10 +299,20 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding: 40px;
+    padding: 5px;
+    padding-left: 0;
     text-align: right;
     background-color: #F3F4F8;
     border-top: 1px solid #CCC;
+  }
+
+  /* The progressbar, at the bottom of the slides, show the global
+     progress of the presentation. */
+  #progress-bar {
+    position: static;
+    bottom: 0;
+    height: 3px;
+    background: #666;
   }
 
   /* Transition effect */
@@ -346,10 +356,3 @@
   /* The items to-be-selected */
   .incremental > *[aria-selected] ~ * { opacity: 0.0; }
 
-  /* The progressbar, at the bottom of the slides, show the global
-     progress of the presentation. */
-  /* This doesn't really look right with black slides - reagle */
-  #progress-bar {
-    height: 2px;
-    background: #0FF;
-  }
